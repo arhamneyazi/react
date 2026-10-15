@@ -31,5 +31,10 @@ export default GitHub;
 
 export const githubInfoLoader = async () => {
   const response = await fetch(`https://api.github.com/users/arhamneyazi`);
+  if (!response.ok) {
+    throw new Response("Could not load data from GitHub", {
+      status: response.status,
+    });
+  }
   return response.json();
 };
