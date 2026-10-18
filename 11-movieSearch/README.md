@@ -1,16 +1,64 @@
-# React + Vite
+# 🎬 Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that lets you search for movies and view detailed information using the OMDB API.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is my first independent React project, built while learning web development. Designed and structured without following any tutorial — components, hooks, and logic planned and written myself.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search any movie by title
+- Displays movie poster, title, year, genre, IMDb rating, plot, and director
+- Clean dark UI built with Tailwind CSS
+- Custom React hook for API logic separation
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- Tailwind CSS v4
+- OMDB API
+
+## Getting Started
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/movie-search.git
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Get a free API key from [omdbapi.com](https://omdbapi.com) and add it to `src/hooks/useMovieInfo.js`
+
+4. Run the app
+
+```bash
+npm run dev
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── SearchBox.jsx
+│   └── MovieCard.jsx
+├── hooks/
+│   └── useMovieInfo.js
+└── App.jsx
+```
+
+## Screenshot
+
+<img width="1917" height="936" alt="image" src="https://github.com/user-attachments/assets/abd27514-e2c2-4fcd-a62e-e4b19a3da6a4" />
+
+
+## License
+
+MIT
