@@ -14,7 +14,7 @@ function App() {
         <SearchBox onSearch={(submittedTitle) => setTitle(submittedTitle)} />
       </div>
       <div className="flex grow items-center justify-center p-8">
-        {movieInfo && movieInfo["Title"] && (
+        {movieInfo && movieInfo["Title"] ? (
           <MovieCard
             title={movieInfo["Title"]}
             poster={movieInfo["Poster"]}
@@ -24,6 +24,10 @@ function App() {
             year={movieInfo["Year"]}
             genre={movieInfo["Genre"] ? movieInfo["Genre"].split(", ") : []}
           />
+        ) : (
+          <h1 className="text-xl text-slate-400 font-bold animate-pulse -mt-60">
+            Search for any movie or show to get started
+          </h1>
         )}
       </div>
     </div>
